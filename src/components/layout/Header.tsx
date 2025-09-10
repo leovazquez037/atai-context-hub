@@ -2,6 +2,8 @@ import { Bell, User, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
+import ataiLogo from '@/assets/atai-logo.svg';
+import axenovaLogo from '@/assets/axenova-logo.svg';
 
 export function Header() {
   return (
@@ -18,9 +20,12 @@ export function Header() {
         </div>
 
         <div className="flex items-center space-x-4">
-          <div className="text-right">
-            <div className="text-sm font-medium text-foreground">Sistema ATAI</div>
-            <div className="text-xs text-muted-foreground">Contexto IoT Industrial</div>
+          <div className="flex items-center space-x-3">
+            <img src={ataiLogo} alt="ATAI" className="h-6" />
+            <div className="text-right">
+              <div className="text-sm font-medium text-foreground">Sistema ATAI</div>
+              <div className="text-xs text-muted-foreground">Contexto IoT Industrial</div>
+            </div>
           </div>
 
           <Button variant="ghost" size="sm" className="relative">

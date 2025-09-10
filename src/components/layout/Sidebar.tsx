@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import axenovaLogo from '@/assets/axenova-logo.svg';
 import { 
   Building, 
   Factory, 
@@ -52,12 +53,15 @@ export function Sidebar() {
       isCollapsed ? "w-16" : "w-64"
     )}>
       <div className="flex h-16 items-center justify-between px-4 border-b border-border">
-        {!isCollapsed && (
+        {!isCollapsed ? (
           <div className="flex items-center space-x-2">
+            <img src={axenovaLogo} alt="Axenova" className="h-6 text-foreground" />
+          </div>
+        ) : (
+          <div className="flex items-center justify-center">
             <div className="w-8 h-8 rounded bg-gradient-to-br from-primary to-primary-accent flex items-center justify-center">
               <Activity className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="font-semibold text-foreground">ATAI Context</span>
           </div>
         )}
         <Button
