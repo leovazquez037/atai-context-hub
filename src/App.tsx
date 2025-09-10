@@ -10,6 +10,8 @@ import Plants from "./pages/Plants";
 import Areas from "./pages/Areas";
 import Equipment from "./pages/Equipment";
 import Devices from "./pages/Devices";
+import Channels from "./pages/Channels";
+import Credentials from "./pages/Credentials";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +30,8 @@ const App = () => (
             <Route path="/areas" element={<Areas />} />
             <Route path="/equipment" element={<Equipment />} />
             <Route path="/devices" element={<Devices />} />
+            <Route path="/channels" element={<Channels />} />
+            <Route path="/credentials" element={<Credentials />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
